@@ -6,11 +6,14 @@
     "antd": "^4.1.3",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
+    "formik": "^2.1.4",
+    "formik-antd": "^2.0.1",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -20,12 +23,65 @@
     "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "airbnb",
+      "airbnb/hooks",
+      "prettier"
+    ],
+    "rules": {
+      "semi": 0,
+      "arrow-parens": [
+        "warn",
+        "as-needed"
+      ],
+      "prettier/prettier": [
+        "warn"
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "newlines-between": "always"
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "prettier": "^2.0.4",
+    "prettier-eslint": "^9.0.1"
+  }
 }
