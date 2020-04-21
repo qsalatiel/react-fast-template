@@ -1,9 +1,9 @@
-const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+const { override, fixBabelImports, addLessLoader } = require('customize-cra')
 
 module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { '@primary-color': '#d9363e' },
+    modifyVars: { '@primary-color': '#FECE2F' },
   }),
   fixBabelImports('import', {
     libraryName: 'antd',
@@ -14,5 +14,5 @@ module.exports = override(
     libraryName: 'formik-antd',
     libraryDirectory: 'es',
     style: true,
-  }),
-);
+  })
+)

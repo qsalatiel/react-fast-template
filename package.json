@@ -10,6 +10,8 @@
     "formik-antd": "^2.0.1",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
@@ -58,13 +60,31 @@
             "sibling",
             "index"
           ],
-          "newlines-between": "always"
+          "newlines-between": "ignore"
         }
       ]
     },
     "plugins": [
       "prettier"
-    ]
+    ],
+    "settings": {
+      "import/resolver": {
+        "alias": {
+          "map": [
+            ["components", "./src/components"],
+            ["components/atoms", "./src/components/atoms"],
+            ["components/molecules", "./src/components/molecules"],
+            ["components/organisms", "./src/components/organisms"],
+            ["components/templates", "./src/components/templates"],
+            ["pages", "./src/components/pages"],
+            ["styles", "./src/styles"],
+            ["store", "./src/store"],
+            ["store/ducks", "./src/store/ducks"]
+          ],
+          "extensions": [".js"]
+        }
+      }
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -76,6 +96,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.3",

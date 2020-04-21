@@ -1,10 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import './index.css'
-import App from './App'
+import { SignUpPage, SignInPage, HomePage, NotFoundPage, SettingsPage } from 'pages'
+
+import './styles/index.css'
 import * as serviceWorker from './serviceWorker'
-// import "antd/dist/antd.css"
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/sign-up">
+        <SignUpPage />
+      </Route>
+      <Route path="/sign-in">
+        <SignInPage />
+      </Route>
+      <Route path="/settings">
+        <SettingsPage />
+      </Route>
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
+      <Route>
+        <NotFoundPage />
+      </Route>
+    </Switch>
+  </Router>
+)
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
