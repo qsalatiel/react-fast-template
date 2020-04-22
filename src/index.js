@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 
+import { PrivateRoute } from 'components/organisms'
 import {
   SignUpPage,
   SignInPage,
@@ -27,6 +28,7 @@ const locales = {
   pt: ptbr,
   en,
 }
+
 const language = navigator.language.split(/[-_]/)[0]
 
 const App = () => (
@@ -39,27 +41,27 @@ const App = () => (
         <Route path="/sign-in">
           <SignInPage />
         </Route>
-        <Route path="/" exact>
+        <PrivateRoute path="/" exact>
           <HomePage />
-        </Route>
-        <Route path="/list">
+        </PrivateRoute>
+        <PrivateRoute path="/list">
           <ListModelPage />
-        </Route>
-        <Route path="/settings" exact>
+        </PrivateRoute>
+        <PrivateRoute path="/settings" exact>
           <ProfileSettingsPage />
-        </Route>
-        <Route path="/settings/company">
+        </PrivateRoute>
+        <PrivateRoute path="/settings/company">
           <CompanySettingsPage />
-        </Route>
-        <Route path="/settings/team">
+        </PrivateRoute>
+        <PrivateRoute path="/settings/team">
           <TeamSettingsPage />
-        </Route>
-        <Route path="/settings/billing">
+        </PrivateRoute>
+        <PrivateRoute path="/settings/billing">
           <BillingSettingsPage />
-        </Route>
-        <Route path="/settings/privacy">
+        </PrivateRoute>
+        <PrivateRoute path="/settings/privacy">
           <PrivacySettingsPage />
-        </Route>
+        </PrivateRoute>
         <Route>
           <NotFoundPage />
         </Route>
