@@ -15,6 +15,7 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
+    "react-intl": "^4.5.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
@@ -71,17 +72,46 @@
       "import/resolver": {
         "alias": {
           "map": [
-            ["components", "./src/components"],
-            ["components/atoms", "./src/components/atoms"],
-            ["components/molecules", "./src/components/molecules"],
-            ["components/organisms", "./src/components/organisms"],
-            ["components/templates", "./src/components/templates"],
-            ["pages", "./src/components/pages"],
-            ["styles", "./src/styles"],
-            ["store", "./src/store"],
-            ["store/ducks", "./src/store/ducks"]
+            [
+              "components",
+              "./src/components"
+            ],
+            [
+              "components/atoms",
+              "./src/components/atoms"
+            ],
+            [
+              "components/molecules",
+              "./src/components/molecules"
+            ],
+            [
+              "components/organisms",
+              "./src/components/organisms"
+            ],
+            [
+              "components/templates",
+              "./src/components/templates"
+            ],
+            [
+              "pages",
+              "./src/components/pages"
+            ],
+            [
+              "styles",
+              "./src/styles"
+            ],
+            [
+              "store",
+              "./src/store"
+            ],
+            [
+              "store/ducks",
+              "./src/store/ducks"
+            ]
           ],
-          "extensions": [".js"]
+          "extensions": [
+            ".js"
+          ]
         }
       }
     }

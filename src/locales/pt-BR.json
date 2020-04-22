@@ -1,0 +1,12 @@
+{
+  "header.help": "Ajuda",
+  "header.settings": "Configurações",
+  "header.signout": "Sair",
+  "header.nav.home": "Início",
+  "header.nav.list": "Lista do modelo",
+  "settings.sidebar.profile": "Perfil",
+  "settings.sidebar.companySettings": "Dados da empresa",
+  "settings.sidebar.team": "Equipe",
+  "settings.sidebar.billing": "Pagamento",
+  "settings.sidebar.privacy": "Privacidade"
+}

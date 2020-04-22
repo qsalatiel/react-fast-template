@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Layout, Breadcrumb, Menu } from 'antd'
+import { Link } from 'react-router-dom'
+import { FormattedMessage as Intl } from 'react-intl'
 
 import { Header, Footer } from 'components/organisms'
 
@@ -24,10 +26,26 @@ const SettingsTemplate = ({ children }) => {
               defaultOpenKeys={['sub1']}
               style={{ height: '100%' }}
             >
-              <Menu.Item key="1">option1</Menu.Item>
-              <Menu.Item key="2">option2</Menu.Item>
-              <Menu.Item key="3">option3</Menu.Item>
-              <Menu.Item key="4">option4</Menu.Item>
+              <Menu.Item key="1">
+                <Intl id="settings.sidebar.profile" />
+                <Link to="/settings" />
+              </Menu.Item>
+              <Menu.Item key="2">
+                <Intl id="settings.sidebar.companySettings" />
+                <Link to="/settings/company" />
+              </Menu.Item>
+              <Menu.Item key="3">
+                <Intl id="settings.sidebar.team" />
+                <Link to="/settings/team" />
+              </Menu.Item>
+              <Menu.Item key="4">
+                <Intl id="settings.sidebar.billing" />
+                <Link to="/settings/billing" />
+              </Menu.Item>
+              <Menu.Item key="5">
+                <Intl id="settings.sidebar.privacy" />
+                <Link to="/settings/privacy" />
+              </Menu.Item>
             </Menu>
           </Layout.Sider>
           <Layout.Content style={{ padding: '0 24px', minHeight: 280 }}>{children}</Layout.Content>

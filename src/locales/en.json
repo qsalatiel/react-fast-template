@@ -1,0 +1,12 @@
+{
+  "header.help": "Need help?",
+  "header.settings": "Settings",
+  "header.signout": "Sign out",
+  "header.nav.home": "Home",
+  "header.nav.list": "List model",
+  "settings.sidebar.profile": "Profile",
+  "settings.sidebar.companySettings": "Company settings",
+  "settings.sidebar.team": "Team",
+  "settings.sidebar.billing": "Billing",
+  "settings.sidebar.privacy": "Privacy"
+}
